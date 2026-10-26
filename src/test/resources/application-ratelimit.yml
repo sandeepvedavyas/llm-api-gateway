@@ -1,0 +1,6 @@
+gateway:
+  auth:
+    keys:
+      - id: test
+        secret: test-key
+        requests-per-minute: 1

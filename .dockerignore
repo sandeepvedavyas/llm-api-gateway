@@ -1,0 +1,11 @@
+.git
+.github
+.gradle
+.idea
+build
+out
+*.md
+.env
+.env.*
+scripts
+src/test

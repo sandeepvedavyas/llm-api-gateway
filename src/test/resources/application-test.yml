@@ -1,0 +1,17 @@
+spring:
+  main:
+    banner-mode: "off"
+
+gateway:
+  auth:
+    keys:
+      - id: test
+        secret: test-key
+        requests-per-minute: 1000
+    keys-env: ""
+  provider:
+    base-url: http://127.0.0.1:9
+    api-key: test-upstream-key
+    max-retries: 0
+    connect-timeout: 1s
+    response-timeout: 2s

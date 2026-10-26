@@ -1,0 +1,15 @@
+services:
+  gateway:
+    build: .
+    ports:
+      - "${PORT:-8080}:8080"
+    environment:
+      SPRING_PROFILES_ACTIVE: json
+      GATEWAY_KEY_ID: ${GATEWAY_KEY_ID:-local}
+      GATEWAY_API_KEY: ${GATEWAY_API_KEY:-local-dev-key-change-me}
+      GATEWAY_RPM: ${GATEWAY_RPM:-60}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      OPENAI_BASE_URL: ${OPENAI_BASE_URL:-https://api.openai.com}
+      OPENAI_TIMEOUT: ${OPENAI_TIMEOUT:-60s}
+      PORT: 8080
+    restart: unless-stopped
